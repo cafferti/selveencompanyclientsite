@@ -1,0 +1,12 @@
+.App{
+    position: relative;
+    overflow-x: clip;
+}
+
+
+.white-gradient{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100px;
+}

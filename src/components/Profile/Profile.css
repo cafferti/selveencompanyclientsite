@@ -1,0 +1,104 @@
+@import url('https://fonts.googlrapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #edf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.profile {
+    max-width: 1440px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.card{
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin-bottom: 10px;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card-header h3{
+    font-size: 20px;
+}
+.card-header p {
+    opacity: 60%;
+    font-size: .85rem;
+}
+.card__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2.5px solid #5d77d6;
+    margin: 8px;
+}
+.card__lead{
+    font-size: 1.01rem;
+    line-height: 2;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+.card__lead p{
+    font-size: 1.01rem;
+    line-height: 2;
+    font-weight: 700;
+}
+.card__qoute{
+    font-size: .95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 90%;
+}
+
+.blue{
+    color: #4161df;
+}
+.line{
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-right: 40px;
+    opacity:65%;
+    margin-bottom: 30px;
+}
+.space{
+    margin-right: 10px;
+}
+.profile {
+    max-width: 1440px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex; /* Add flexbox */
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Add some spacing between cards */
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    flex: 0 0 calc(33.33% - 40px); /* Each card takes up 1/3 of the space, minus the gap */
+    margin-bottom: 0; /* Remove default margin-bottom */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .card {
+      flex-basis: 100%; /* Each card takes up full width on small screens */
+      margin-bottom: 20px; /* Add margin-bottom back on small screens */
+    }
+  }
