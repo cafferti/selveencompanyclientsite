@@ -15,7 +15,7 @@ const Residencies = () => {
         const getGallery = async () => {
     
           try {
-            const response = await fetch('https://saul.onrender.com/api/v1/gallery/');
+            const response = await fetch('https://saul-8bpn.onrender.com/api/v1/gallery/');
             if (response.ok) {
               const result = await response.json();
               if (Array.isArray(result.data)) {
@@ -51,7 +51,7 @@ const Residencies = () => {
           {galleryData.map((card, i) => (
             <SwiperSlide key={i}>
               <div className="flexColStart r-card">
-                <img className='border' src={card.imageUrl[0]} alt="home" />
+                <img className='border h-[13rem] ' src={card.imageUrl[0]} alt="home" />
                 <span className="secondaryText r-price">
                   <span style={{ color: 'orange' }}>₦</span>
                   <span>{card.price}</span>

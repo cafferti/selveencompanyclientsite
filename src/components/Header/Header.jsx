@@ -12,7 +12,7 @@ const Header = () => {
     }
 
 	return (
-	<section className='h-wrapper h-[6rem] bg-[#1d3596] border-b-2 border-gray-400'>
+	<section className='h-wrapper h-[6rem] bg-[#003366] border-b-2 border-gray-400'>
       <div className='w-[100%] bg-[#3755cc] h-[1rem]'>
       </div>
 

@@ -25,11 +25,12 @@ return(
         </div>
         {/* right side*/}
         <div className="flexColstart v-right">
-            <span className="orangeText">Our Value</span>
-            <span className="primaryText">Value we give you</span>
-            <span className="secondaryText">We are always ready to hep by providing the best vale for you
+            <span className="orangeText">Values </span>
+            <span className="primaryText">Our Mission</span>
+            <span className="secondaryText">
+            To be a global brand that will transform the liftstyle of Real Estate investment and housing interior. 
                 <br/>
-                We believe a good place to live can make your life better
+                We see housing and interior as a natural projection of the soul been expressed by our clients.
             </span>
             
             <Accordion

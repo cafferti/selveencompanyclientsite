@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Profile.css";
-const Profile = () => {
+function Profile() {
+  const [isOpen, setIsOpen] = useState(false); // Initially closed
+
+  const toggleContent = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div class="profile">
+    <div>
+      <div className='container'>
+      <button className="button" onClick={toggleContent}>
+        {isOpen ? 'Collapse' : 'Check out our team'}
+      </button>
+      </div>
+      {isOpen && (
+        <div>
+          <div class="profile">
              {" "}
       <div class="card card_purple">
                    {" "}
@@ -39,7 +53,7 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-                      Ponsak Longtau is a thriving real estate professional based in Jos, Plateau State, boasting 8 years of experience in the dynamic property market. Passionate about helping clients find their perfect homes and investment properties, he possesses an in-depth understanding of the local market and combines his his sharp business skills to provide personalized service, exceeding client expectations at every turn.
+                      Ponsak Longtau our team lead is a thriving real estate professional based in Jos, Plateau State, boasting 8 years of experience in the dynamic property market.
         </p>
                {" "}
       </div>
@@ -53,7 +67,7 @@ const Profile = () => {
           <div>
                            {" "}
             <h3>
-              Nandom<span className="blue">Joseph Goro</span>
+              Nandom <span className="blue">Joseph Gora</span>
             </h3>
                                 <p>Architect</p>               {" "}
           </div>
@@ -80,7 +94,7 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-        A creative visionary blending architecture and real estate expertise, Nandom Gora designs spaces that inspire and elevate. With a keen eye for detail and a deep understanding of market trends, he crafts properties that seamlessly integrate aesthetics, functionality, and investment potential. 
+        A creative visionary blending architecture and real estate expertise, Nandom Gora designs spaces for our clients that inspire and elevate. 
         </p>
                {" "}
       </div>
@@ -95,7 +109,7 @@ const Profile = () => {
           <div>
                                    {" "}
             <h3>
-              Brst Kyemang <span className="blue">Mundi</span>
+              ML Kyemang <span className="blue">Esq</span>
             </h3>
                                 <p>Attorney</p>               {" "}
           </div>
@@ -122,7 +136,7 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-        A legal expert specializing in real estate law, Barrister Kyemang Mundi skillfully navigates the complexities of property transactions. With a deep understanding of contracts and titles,  he ensures smooth and secure deals for his clients. Whether handling residential purchases, commercial leases, or development projects, he provides meticulous legal guidance and protects his clients' interests at every step. 
+        Our legal expert who specializes in real estate law, Barrister Kyemang Mundi skillfully helps us to navigate the complexities of property transactions. 
         </p>
                {" "}
       </div>
@@ -164,7 +178,7 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-        A seasoned professional in the real estate industry, Seyilnen William expertly navigates the complexities of leasing and appraisal. With a keen eye for market trends and a deep understanding of property valuation, she ensures fair and profitable transactions for all parties involved. 
+        A seasoned professional in the real estate industry, Seyilnen William expertly helps us to navigate the complexities of leasing and appraisal.  
         </p>
                {" "}
       </div>
@@ -204,7 +218,7 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-        A meticulous guardian of data integrity and regulatory compliance in the real estate industry, Ishaku Dyelshak ensures smooth operations and risk mitigation. With a deep understanding of technology he safeguards sensitive information, streamline processes, and maintain ethical standards. His expertise in data management and cybersecurity protects both clients and the company.
+        A meticulous guardian of our data integrity, he ensures we adhere to regulatory compliance in the real estate industry, Ishaku Dyelshak ensures a smooth running of all our ICT infrastructure and services. 
         </p>
                {" "}
       </div>
@@ -212,7 +226,7 @@ const Profile = () => {
       <div class="card card__purple">
                            {" "}
         <header class="card-header">
-                                  <img src="" class="card__img" alt="image" /> 
+                                  <img src="img5.jpg" class="card__img" alt="image" /> 
                                {" "}
           <div>
                                    {" "}
@@ -244,12 +258,15 @@ const Profile = () => {
         </div>
                     <br />           {" "}
         <p class="card__qoute">
-        A dynamic leader in the real estate industry, Dape Nan'ep expertly orchestrates the successful completion of diverse projects. With a keen eye for detail and a talent for problem-solving, he ensures projects are delivered on time and within budget. His exceptional organizational skills and effective communication keep all stakeholders aligned and informed throughout the project lifecycle.
+        A dynamic member of our team with years of experience in the real estate industry, Dape Nan'ep expertly orchestrates the successful completion of our diverse projects. 
         </p>
                {" "}
       </div>
                  {" "}
     </div>
+        </div>
+      )}
+    </div>
   );
-};
+}
 export default Profile;

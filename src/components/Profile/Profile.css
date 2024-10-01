@@ -5,6 +5,13 @@
     margin: 0;
     padding: 0;
 }
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
 body{
     background: #edf2f8;
     font-family: 'Barlow Semi Condensed', sans-serif;

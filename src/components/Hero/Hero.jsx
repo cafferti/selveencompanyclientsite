@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import {HiLocationMarker} from 'react-icons/hi'
 import CountUp from 'react-countup'
 import {motion} from "framer-motion"
 
@@ -30,11 +29,7 @@ const Hero = () => {
                 </div>
 {/* only thing i need */}
 
-                <div className="flexCenter search-bar">
-                    <HiLocationMarker color="var(--blue)" size={25}/>
-                    <input type="text" />
-                    <button className='button'>Search</button>
-                </div>
+                
 
 
                 <div className="flexCenter stats">
