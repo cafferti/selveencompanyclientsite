@@ -48,7 +48,7 @@ const Residencies = () => {
         </div>
         <Swiper {...sliderSettings}>
         <SliderButtons />
-          {galleryData.map((card, i) => (
+          {galleryData.slice().reverse().map((card, i) => (
             <SwiperSlide key={i}>
               <div className="flexColStart r-card">
                 <img className='border h-[13rem] ' src={card.imageUrl[0]} alt="home" />
