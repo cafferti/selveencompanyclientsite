@@ -1,31 +1,19 @@
-import Header from './components/Header/Header' 
-import Hero from './components/Hero/Hero'
-import './App.css'
-import Profile from './components/Profile/Profile';
-import Residencies from './components/Residencies/Residencies'
-import Values from './components/Values/Values';
-import Contacts from './components/Contacts/Contacts';
-import GetStarted from './components/GetStarted/GetStarted';
-import Footer from './components/Footer/Footer'
-import Saulltechhero from './components/Hero/saulltechhero';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TeamPage from './pages/TeamPage';
+import CommonLayout from './components/Layout/CommonLayout';
+import './App.css';
 
 function App() {
   return (
-  <div className="App">
-    
-    <div>
-      <div className="white-gradient"/>
-    <Header/>
-    <Saulltechhero/>
-    {/* <Hero/> */}
-    </div>
-    <Residencies/>
-    <Values/>
-    <Contacts/>
-    <Profile/>
-    <GetStarted/>
-    <Footer/>
-  </div>
+    <BrowserRouter>
+      <CommonLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/team" element={<TeamPage />} />
+        </Routes>
+      </CommonLayout>
+    </BrowserRouter>
   );
 }
 
