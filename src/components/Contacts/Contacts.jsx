@@ -6,11 +6,11 @@ import {HiChatBubbleBottomCenter} from 'react-icons/hi2'
 
 const Contacts = () =>{
     return(
-        <section className="c-wrapper">
+        <section id="contacts" className="c-wrapper">
             <div className="paddings innerWidth flexCenter c-container">
                 {/*left side */} 
                 <div className="flexColStart c-left">
-                <span className="orangeText">Our Contacts</span>
+                {/* <span className="orangeText">Our Contacts</span> */}
             <span className="primaryText">Easy to Contact us</span>
             <span className="secondaryText">
                 We are always ready to help by providing the best 
@@ -96,8 +96,8 @@ const Contacts = () =>{
                 </div>
             </div>
             <div className="beginning_of_next_section">
-        <span className='orangeText' id="center">Meet Our Team</span>
-        <span className='primaryText'>The Team That's Got Your Back</span>
+        {/* <span className='orangeText' id="center">Meet Our Team</span> */}
+        {/* <span className='primaryText'>The Team That's Got Your Back</span> */}
     </div>
         </section>
         

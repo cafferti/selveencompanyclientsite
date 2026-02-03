@@ -15,7 +15,7 @@ import data from '../../utils/accordion'
 
 const Values = () =>{
 return(
-<section className="v-wrapper">
+<section id="values" className="v-wrapper">
     <div className="paddings innerWidth flexCenter v-container">
         {/* left side*/}
         <div className="v-left">
@@ -39,19 +39,24 @@ return(
             preExpanded={[0]}
             >
                 {data.map((item, i) => {
-                    const [className, setClassName] = useState(null)
                     return (
-                        <AccordionItem className={`accordionItem ${className}`} key={i} uuid={i}>
+                        <AccordionItem className="accordionItem" key={i} uuid={i}>
                             <AccordionItemHeading>
                             <AccordionItemButton className="flexCenter accordionButton">
                             <AccordionItemState>
-                                {({expanded})=> expanded ? setClassName('expanded') : setClassName('collapsed')}
+                                {({expanded})=> {
+                                    const className = expanded ? 'expanded' : 'collapsed';
+                                    return (
+                                        <>
+                                            <div className={`flexCenter icon ${className}`}>{item.icon}</div>
+                                            <span className={`primaryText ${className}`}>{item.heading}</span>
+                                            <div className={`flexCenter icon ${className}`}>
+                                                <MdOutlineArrowDropDown size={20}/>
+                                            </div>
+                                        </>
+                                    );
+                                }}
                             </AccordionItemState>
-                                <div className="flexCenter icon">{item.icon}</div>
-                            <span className="primaryText">{item.heading}</span>
-                            <div className="flexCenter icon">
-                            <MdOutlineArrowDropDown size={20}/>
-                            </div>
                             </AccordionItemButton>
                             </AccordionItemHeading>
                             <AccordionItemPanel>

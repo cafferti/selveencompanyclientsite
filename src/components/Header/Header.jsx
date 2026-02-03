@@ -17,7 +17,9 @@ const Header = () => {
       </div>
 
         <div className='flexCenter paddings innerWidth h-container'>
-                <img className='w-[3rem]' src="./logo1.png" alt="logo" width={100} />
+                <a href="/">
+                    <img className='w-[3rem]' src="/logo1.png" alt="logo" width={100} />
+                </a>
                 <OutsideClickHandler
                    onOutsideClick={()=> {
                     setMenuOpened(false)
@@ -26,12 +28,12 @@ const Header = () => {
                     <div className="h-menu flexCenter"
                     style={getMenuStyles(menuOpened)}
                     >
-                            <a href="">Residency</a>
-                            <a href="">Our Value</a>
-                            <a href="">Contact Us</a>
-                            <a href="">Get Started</a>
+                            <a href="/#residencies">Residency</a>
+                            <a href="/#values">Our Value</a>
+                            <a href="/#contacts">Contact Us</a>
+                            <a href="/team">Our Team</a>
                             <button className="button">
-                                <a href="">Contact</a>
+                                <a href="/#contacts">Contact</a>
                             </button> 
                     </div>
                 </OutsideClickHandler>
