@@ -14,7 +14,7 @@ const teamMembers = [
     role: 'Managing Director',
     phone: '09034703963',
     email: 'ponsaklongtau@gmail.com',
-    gender: 'Male',
+    // gender: 'Male',
     bio: 'Ponsak Longtau, our team lead is a thriving real estate professional based in Jos, Plateau State, boasting 8 years of experience in the dynamic property market.',
     image: '_MG_1293.jpg',
   },
@@ -23,11 +23,11 @@ const teamMembers = [
     name: 'Nandom Joseph Gora',
     firstName: 'Nandom',
     lastName: 'Joseph Gora',
-    role: 'Architect',
-    phone: '07068785398',
-    email: 'nandomgora88@gmail.com',
-    gender: 'Male',
-    bio: 'A creative visionary blending architecture and real estate expertise, Nandom Gora designs spaces for our clients that inspire and elevate.',
+    role: 'Project Manager',
+    // phone: '07068785398',
+    // email: 'nandomgora88@gmail.com',
+    // gender: 'Male',
+    bio: 'A creative visionary blending Project Manager and real estate expertise, Nandom Gora designs spaces for our clients that inspire and elevate.',
     image: '3nandom_joseph_gora.jpg',
   },
   {
@@ -36,9 +36,9 @@ const teamMembers = [
     firstName: 'ML Kyemang',
     lastName: 'Esq',
     role: 'Attorney',
-    phone: '08036028003',
-    email: 'kyemang@outlook.com',
-    gender: 'Male',
+    // phone: '08036028003',
+    // email: 'kyemang@outlook.com',
+    // gender: 'Male',
     bio: 'Our legal expert who specializes in real estate law, Barrister Kyemang Mundi skillfully helps us to navigate the complexities of property transactions.',
     image: './1st.jpg',
   },
@@ -48,9 +48,9 @@ const teamMembers = [
     firstName: 'William',
     lastName: 'Seyilnen',
     role: 'Leasing/Appraisal Director',
-    phone: '08021123556',
-    email: 'williammuseyilnen@gmail.com',
-    gender: 'Female',
+    // phone: '08021123556',
+    // email: 'williammuseyilnen@gmail.com',
+    // gender: 'Female',
     bio: 'A seasoned professional in the real estate industry, Seyilnen William expertly helps us to navigate the complexities of leasing and appraisal.',
     image: './4william_seyilnen.png',
   },
@@ -60,9 +60,9 @@ const teamMembers = [
     firstName: 'Ishaku',
     lastName: 'Dyelshak',
     role: 'IT/Compliance Officer',
-    phone: '09035249481',
-    email: 'ishakudyelshak@gmail.com',
-    gender: 'Male',
+    // phone: '09035249481',
+    // email: 'ishakudyelshak@gmail.com',
+    // gender: 'Male',
     bio: 'A meticulous guardian of our data integrity, he ensures we adhere to regulatory compliance in the real estate industry, Ishaku Dyelshak ensures a smooth running of all our ICT infrastructure and services.',
     image: '2nd.jpg',
   },
@@ -71,10 +71,10 @@ const teamMembers = [
     name: 'Dape Nan\'ep Dawam',
     firstName: 'Dape',
     lastName: 'Nan\'ep Dawam',
-    role: 'Project Manager',
-    phone: '08165363081',
-    email: 'dapenanep@gmail.com',
-    gender: 'Male',
+    role: ' Architect',
+    // phone: '08165363081',
+    // email: 'dapenanep@gmail.com',
+    // gender: 'Male',
     bio: 'A dynamic member of our team with years of experience in the real estate industry, Dape Nan\'ep expertly orchestrates the successful completion of our diverse projects.',
     image: 'img5.jpg',
   },
@@ -141,36 +141,32 @@ function TeamMemberCard({ member }) {
         <div className="mb-4 h-px bg-border" />
 
         {/* Contact Info */}
-        <div className="mb-4 space-y-2 text-sm">
-          <div className="flex items-start gap-2">
-            <span className="min-w-fit font-medium text-muted-foreground">
-              Phone:
-            </span>
-            <a
-              href={`tel:${member.phone}`}
-              className="text-red-500 hover:underline font-bold"
-            >
-              {member.phone}
-            </a>
+        {member.id === '1' && (
+          <div className="mb-4 space-y-2 text-sm">
+            <div className="flex items-start gap-2">
+              <span className="min-w-fit font-medium text-muted-foreground">
+                Phone:
+              </span>
+              <a
+                href={`tel:${member.phone}`}
+                className="text-red-500 hover:underline font-bold"
+              >
+                {member.phone}
+              </a>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="min-w-fit font-medium text-muted-foreground">
+                Email:
+              </span>
+              <a
+                href={`mailto:${member.email}`}
+                className="truncate text-red-500 hover:underline font-bold"
+              >
+                {member.email}
+              </a>
+            </div>
           </div>
-          <div className="flex items-start gap-2">
-            <span className="min-w-fit font-medium text-muted-foreground">
-              Email:
-            </span>
-            <a
-              href={`mailto:${member.email}`}
-              className="truncate text-red-500 hover:underline font-bold"
-            >
-              {member.email}
-            </a>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="min-w-fit font-medium text-muted-foreground">
-              Gender:
-            </span>
-            <span className="text-foreground">{member.gender}</span>
-          </div>
-        </div>
+        )}
 
         {/* Bio */}
         <p className="text-sm leading-relaxed text-muted-foreground">
