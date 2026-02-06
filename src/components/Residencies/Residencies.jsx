@@ -46,7 +46,7 @@ const Residencies = () => {
             <span className='orangeText'>Best Choices</span>
             <span className='primaryText'>Popular Residencies</span>
         </div>
-        <Swiper {...sliderSettings}>
+        <Swiper {...sliderSettings} key={galleryData.length}>
         <SliderButtons />
           {galleryData.slice().reverse().map((card, i) => (
             <SwiperSlide key={i}>
