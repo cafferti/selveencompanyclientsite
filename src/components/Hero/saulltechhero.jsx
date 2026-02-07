@@ -69,7 +69,7 @@ export default function SaulltechHero() {
       <section className="relative overflow-hidden">
         <img
           src={heroImages[heroIndex].src}
-          className={`h-[92vh] w-full object-cover ${
+          className={`h-[98vh] w-full object-cover ${
             heroImages[heroIndex].pos === 'top'
               ? 'object-top'
               : 'object-center'
